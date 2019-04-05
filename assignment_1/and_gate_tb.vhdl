@@ -13,7 +13,7 @@ architecture behav of and_gate_tb is
       and_out: out std_logic
       );
   end component and_gate;
-
+  
   signal r_IN_1, r_IN_2, r_OUT : std_logic;
 
   for and0 : and_gate use entity work.and_gate;
