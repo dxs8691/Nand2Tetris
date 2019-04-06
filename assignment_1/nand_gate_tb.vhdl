@@ -8,8 +8,8 @@ architecture behav of nand_gate_tb is
 
   component nand_gate is
     port(
-      input_1 : in std_logic;
-      input_2 : in std_logic;
+      i0 : in std_logic;
+      i1 : in std_logic;
       nand_out: out std_logic
       );
   end component nand_gate;
@@ -22,8 +22,8 @@ begin
   
   nand_0 : nand_gate
     port map(
-      input_1 => r_IN_1,
-      input_2 => r_IN_2,
+      i0 => r_IN_1,
+      i1 => r_IN_2,
       nand_out => r_OUT
       );
 

@@ -11,8 +11,8 @@ end not_gate;
 architecture rtl of not_gate is
   component nand_gate is
     port(
-      input_1 : in std_logic;
-      input_2 : in std_logic;
+      i0 : in std_logic;
+      i1 : in std_logic;
       nand_out: out std_logic
       );
   end component nand_gate;
@@ -23,8 +23,8 @@ begin
 
   g0 : nand_gate
     port map(
-      input_1 => i0,
-      input_2 => i0,
+      i0 => i0,
+      i1 => i0,
       nand_out => gate_out
       );
 
