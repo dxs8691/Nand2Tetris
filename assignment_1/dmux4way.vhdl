@@ -24,10 +24,9 @@ architecture rtl of dmux4way is
 begin
 
   dmux0 : dmux port map(i0 => i0, sel => sel(1), out0 => s0, out1 => s1);
-  dmux1a: dmux port map(i0 => s0, sel => sel(0), out0 => out3, out1 => out2);
+  dmux1a: dmux port map(i0 => s0, sel => sel(0), out0 => out0, out1 => out1);
 
-  dmux1b: dmux port map(i0 => s1, sel => sel(0), out0 => out1, out1 => out0);
-
+  dmux1b: dmux port map(i0 => s1, sel => sel(0), out0 => out2, out1 => out3);
   out_4(0) <= out0;
   out_4(1) <= out1;
   out_4(2) <= out2;

@@ -38,7 +38,7 @@ begin
 
     type out_patterns is array(natural range <>) of std_logic_vector(3 downto 0);
     constant outputs : out_patterns :=
-      ("1000","0100","0010","0001","0000","0000","0000","0000");
+      ("0001","0010","0100","1000","0000","0000","0000","0000");
 
   begin
     for i in inputs'range loop
@@ -47,7 +47,7 @@ begin
       sel <= sel_inputs(i);
 
       wait for 1 ns;
-
+      
       assert out4 = outputs(i)
         report "incorrect output" severity error;
 
