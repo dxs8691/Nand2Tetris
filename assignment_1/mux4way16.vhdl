@@ -26,9 +26,9 @@ architecture rtl of mux4way16 is
 
 begin
 
-  mux0a : mux16 port map(i0_16 => i0, i1_16 => i1, sel => sel(1), out0_16 => a);
-  mux0b : mux16 port map(i0_16 => i2, i1_16 => i3, sel => sel(1), out0_16 => b);
-  mux1 : mux16 port map(i0_16 => a, i1_16 => b, sel => sel(0), out0_16 => out_16);
+  mux0a : mux16 port map(i0_16 => i0, i1_16 => i1, sel => sel(0), out0_16 => a);
+  mux0b : mux16 port map(i0_16 => i2, i1_16 => i3, sel => sel(0), out0_16 => b);
+  mux1 : mux16 port map(i0_16 => a, i1_16 => b, sel => sel(1), out0_16 => out_16);
 
   out16 <= out_16;
 

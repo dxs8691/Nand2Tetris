@@ -42,7 +42,7 @@ begin
 
     type sel_pattern is array(natural range <>) of std_logic_vector(1 downto 0);
     constant sel_inputs : sel_pattern :=(
-      "00","10","01","11");
+      "00","01","10","11");
 
     type out_pattern is array(natural range <>) of std_logic_vector(15 downto 0);
     constant outputs : out_pattern :=(
