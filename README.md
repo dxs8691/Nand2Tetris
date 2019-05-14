@@ -16,4 +16,4 @@ Project building off of assignment 1 to build additional combinational circuits.
 
 ## References 
 
-1. Nisan, N., & Schocken, S. (2008). _The elements of computing systems: Building a modern computer from first principles_. Cambridge, MA: MIT. mitpress.mit.edu/books/elements-computing-systems
+[1.](mitpress.mit.edu/books/elements-computing-systems) Nisan, N., & Schocken, S. (2008). _The elements of computing systems: Building a modern computer from first principles_. Cambridge, MA: MIT. 
