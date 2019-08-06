@@ -23,23 +23,25 @@ architecture rtl of bit is
       );
   end component DFF;
 
-  component and_gate is
+  component mux is
     port(
-      i0 : in std_logic;
-      i1 : in std_logic;
-      and_out : out std_logic
+      i0  : in std_logic;
+      i1  : in std_logic;
+      sel : in std_logic;
+      mux_out : out std_logic
       );
-  end component and_gate;
+  end component mux;
   
-  signal and_clk : std_logic;
+  signal muxOut, Qout: std_logic;
 
 begin
 
-  DFF0 : DFF port map(i0 => i0, clk => and_clk,
-                                q => q, qbar => qbar);
-  and0 : and_gate port map(i0 => clk, i1 => load,
-                                     and_out => and_clk);
+  DFF0 : DFF port map(i0 => muxOut, clk => clk,
+                      q => Qout, qbar => qbar);
+  Mux0 : mux port map(i0 => Qout, i1 => i0, sel => load,
+                      mux_out => muxOut);
 
+  q <= Qout;
 
 end rtl;
   

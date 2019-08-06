@@ -48,7 +48,7 @@ begin
   process
   begin
 
-    wait for 17 ns;
+    wait for 18 ns;
 
     assert out0="0000000000000000"
       report "incorrect output" severity error;
